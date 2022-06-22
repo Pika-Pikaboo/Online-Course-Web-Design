@@ -1,0 +1,321 @@
+@font-face {
+    font-family: 'cartograph';
+    src: url('cartographcf-regular-webfont.woff2') format('woff2'), url('cartographcf-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --color1: dodgerblue;
+    --color2: blue;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+p {
+    font-size: 1.3rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 4rem;
+}
+
+.openbtn {
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin-right: 2rem;
+    font-size: 40px;
+    text-decoration: none;
+    z-index: 100;
+}
+
+.openbtn:hover {
+    color: royalblue;
+}
+
+.logo {
+    width: 150px;
+}
+
+.container {
+    position: relative;
+    overflow: hidden;
+}
+
+#introduction,
+#about,
+#courses,
+#our-team,
+#services,
+#contact {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 7rem;
+}
+
+.intro-left-col,
+.intro-right-col {
+    flex-basis: 50%;
+}
+
+.intro-left-col,
+.course-left-col,
+.contact-left-col {
+    margin-left: 4rem;
+    max-width: 500px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    color: var(--color2);
+    text-decoration: none;
+    border: 2px solid var(--color1);
+    margin-bottom: 1.5rem;
+    transition: all 0.4s ease;
+}
+
+.btn:hover {
+    background-color: var(--color1);
+    color: white;
+}
+
+.line1,
+.line2 {
+    width: 200px;
+    height: 2px;
+    background-color: var(--color1);
+    display: inline-block;
+}
+
+.line2 {
+    width: 100px;
+}
+
+.about-right-col,
+.about-left-col {
+    flex-basis: 50%;
+}
+
+.about-text,
+.services-right-col {
+    padding-right: 2rem;
+    text-align: right;
+}
+
+.quote {
+    font-style: oblique;
+    font-weight: bolder;
+    font-size: 1.75rem;
+    font-family: 'cartograph', 'Arial Narrow Bold', sans-serif;
+}
+
+span.blue {
+    color: var(--color1);
+}
+
+aside {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    width: 0;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background-color: var(--color1);
+    z-index: 10;
+    white-space: nowrap;
+    transition: width 0.5s ease;
+}
+
+ul li {
+    list-style-type: none;
+    font-size: 1.5rem;
+    margin-bottom: 2.3rem;
+}
+
+ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+ul li a:hover {
+    color: aqua;
+}
+
+.social-bar {
+    position: fixed;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.social-bar>a {
+    text-decoration: none;
+    color: var(--color1);
+    display: block;
+    font-size: 25px;
+    margin-bottom: 1.25rem;
+}
+
+.social-bar>a:hover {
+    color: var(--color2);
+}
+
+.course-left-col,
+.course-right-col {
+    flex-basis: 50%;
+}
+
+.course-left-col {
+    max-width: 630px;
+}
+
+.team-left-col,
+.team-right-col,
+.team-middle-col {
+    flex-basis: 33%;
+}
+
+.team-middle-col {
+    text-align: center;
+}
+
+.services-left-col,
+.services-right-col {
+    flex-basis: 50%;
+}
+
+#company-logos {
+    max-width: 800px;
+    margin: 5rem auto 0 auto;
+    display: flex;
+    flex-flow: column wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.dev-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3rem;
+    gap: 3rem;
+}
+
+span>i {
+    font-size: 30px;
+}
+
+.dev-icon {
+    max-width: 30px;
+}
+
+.l1,
+.l2 {
+    width: 300px;
+    height: 4px;
+    margin: 1.25rem 0;
+    background-color: var(--color2);
+}
+
+.l2 {
+    width: 150px;
+}
+
+.lini {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-left-col,
+.contact-right-col {
+    flex-basis: 50%;
+}
+
+input {
+    width: 200px;
+    font-size: 1.25rem;
+    border: 1px solid tan;
+    margin-bottom: 1rem;
+}
+
+::placeholder {
+    color: #ccc;
+}
+
+textarea {
+    max-width: 300px;
+    font-size: 1.25rem;
+    border: 1px solid tan;
+    resize: none;
+}
+
+input:focus,
+textarea:focus {
+    outline: 2px solid orange;
+}
+
+.btn-container {
+    margin-top: 1.5rem;
+}
+
+@media screen and (max-width: 768px) {
+    .logo {
+        width: 100px;
+    }
+    .openbtn {
+        font-size: 25px;
+    }
+    #introduction,
+    #about,
+    #courses,
+    #our-team,
+    #services,
+    #contact {
+        margin-top: 3.5rem;
+        flex-direction: column;
+    }
+    nav,
+    .intro-left-col,
+    .course-left-col,
+    .contact-left-col {
+        margin-left: 2rem;
+    }
+    ul li,
+    .social-bar>a,
+    p,
+    .btn {
+        font-size: 1rem;
+    }
+    .quote {
+        font-size: 1.15rem;
+    }
+}
